@@ -6,16 +6,33 @@ name = gets.chomp.capitalize
 
 puts "Hi #{name}!"
 
-#Ask for age and outputs the possible years they were born in.  
-
-this_year = Time.new
+#Ask for age and birth month and day to output the year they were born in.  
 
 puts "How old are you?"
-
 age = gets.chomp.to_i
 
-birthyear_high = (this_year.year - age)
-birthyear_low = (this_year.year - age - 1)
+puts "What month were you born?  Please enter in numeral form, i.e. January = 1"
+birth_month = gets.chomp.to_i
 
-puts "If you already had a birthday this year, you were born in #{birthyear_high}.  If you did not have your birthday yet this year, you were born in #{birthyear_low}" 
+puts "What day were you born?"
+birth_day = gets.chomp.to_i
+# birth_month = 1
+# birth_day = 1
+# age = 40
+
+if Time.new.month >= birth_month && Time.new.day >= birth_day
+
+	birthyear = (Time.new.year - age)
+else
+
+	birthyear = (Time.new.year - age - 1)
+end
+
+if age <= 30
+	`say "Hey #{name}, you're only #{age}, still young and hip."`
+else
+	`say "Hey #{name}, you're already #{age}? You old fogey!"`
+end
+
+puts "You were born in #{birthyear}." 
 
