@@ -28,10 +28,13 @@ else
 	birthyear = (Time.new.year - age - 1)
 end
 
-if age <= 30
-	`say "Hey #{name}, you're only #{age}, still young and hip."`
+if name = "Julie"
+	`say "Hey #{name}, you were born in #{birthyear}, still young and hip.  Thanks for instructing us!"`
+elsif age <= 30
+	`say "Hey #{name}, you were born in #{birthyear}, still young and hip."`
+	
 else
-	`say "Hey #{name}, you're already #{age}? You old fogey!"`
+	`say "Hey #{name}, you were born in #{birthyear}? You old fogey!"`
 end
 
 puts "You were born in #{birthyear}." 
