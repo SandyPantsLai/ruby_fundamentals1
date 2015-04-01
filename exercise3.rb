@@ -28,7 +28,7 @@ else
 	birthyear = (Time.new.year - age - 1)
 end
 
-if name = "Julie"
+if name == "Julie"
 	`say "Hey #{name}, you were born in #{birthyear}, still young and hip.  Thanks for instructing us!"`
 elsif age <= 30
 	`say "Hey #{name}, you were born in #{birthyear}, still young and hip."`
