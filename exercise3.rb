@@ -16,15 +16,12 @@ birth_month = gets.chomp.to_i
 
 puts "What day were you born?"
 birth_day = gets.chomp.to_i
-# birth_month = 1
-# birth_day = 1
-# age = 40
 
-if Time.new.month >= birth_month && Time.new.day >= birth_day
+#See if birthday has passed or not.
 
+if Time.new.month > birth_month || (Time.new.month >= birth_month && Time.new.day >= birth_day)
 	birthyear = (Time.new.year - age)
 else
-
 	birthyear = (Time.new.year - age - 1)
 end
 
